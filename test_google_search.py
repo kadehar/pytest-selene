@@ -16,7 +16,7 @@ def setup():
 
 
 def test_able_to_find_selene_in_google():
-    search_for(text=selene_search_query, condition=have.text(selene_search_query))
+    search_for(text=selene_search_query, condition=have.text(selene_search_result))
 
 
 def test_unable_to_find_invalid_search_result_in_google():
