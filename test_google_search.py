@@ -25,3 +25,8 @@ def test_unable_to_find_invalid_search_result_in_google():
 
 def search_for(text: str, condition: Condition):
     browser.open('https://google.com')
+    query = browser.element('[name="q"]')
+    query.should(be.blank).type(text).press_enter()
+
+    search = browser.element('#search')
+    search.should(condition)
